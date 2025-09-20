@@ -63,10 +63,11 @@ app.use("/api/settings", settingsRoutes);
 
 const PORT = process.env.PORT || 8085;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Denim Backend ${PORT} portunda çalışıyor`);
   console.log(`API: http://localhost:${PORT}/api`);
   console.log(`DB Test: http://localhost:${PORT}/api/db-test`);
+  console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
 });
 
 app.use(notFound);
