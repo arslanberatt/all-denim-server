@@ -78,65 +78,27 @@ BACKEND_URL="http://localhost:8085"
 FRONTEND_URL="http://localhost:3000"
 ```
 
-## 🚀 Local Kurulum
-
-### 1. Gereksinimler
-
-- Node.js 18+
-- PostgreSQL 15+ (Docker ile)
-
-### 2. Kurulum Adımları
+## 🚀 Kurulum
 
 ```bash
-# Repository'yi klonlayın
+# Klonla ve kur
 git clone https://github.com/arslanberatt/all-denim-server.git
 cd all-denim-server
-
-# Bağımlılıkları yükleyin
 npm install
 
-# .env dosyası oluşturun
-touch .env
-```
-
-### 3. .env Dosyası Oluşturun
-
-```env
-DATABASE_URL="postgresql://berat:Berat123.@localhost:5432/denim_db"
+# .env dosyası oluştur
+echo 'DATABASE_URL="postgresql://berat:Berat123.@localhost:5432/denim_db"
 PORT=8085
-NODE_ENV=development
-```
+NODE_ENV=development' > .env
 
-### 4. PostgreSQL'i Başlatın
-
-```bash
-# Docker ile PostgreSQL başlatın
+# PostgreSQL başlat
 docker-compose up -d postgres
 
-# Veya manuel PostgreSQL kurulumu yapın
-```
-
-### 5. Veritabanını Hazırlayın
-
-```bash
-# Migration'ları çalıştırın
+# Migration çalıştır
 npm run db:migrate
 
-# Seed data yükleyin (isteğe bağlı)
-node seed.js
-```
-
-### 6. Uygulamayı Başlatın
-
-```bash
-# Development modunda
+# Uygulamayı başlat
 npm run dev
-
-# Production modunda
-npm start
 ```
 
-### 7. Test Edin
-
-- API: http://localhost:8085/api
-- DB Test: http://localhost:8085/api/db-test
+**API:** http://localhost:8085/api
