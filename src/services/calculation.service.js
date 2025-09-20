@@ -15,8 +15,8 @@ class CalculationService {
         data: {
           companyId: data.companyId,
           packageType: data.packageType,
-          fabricPrice: data.fabricPrice,
-          fabricMeter: data.fabricMeter,
+          fabricPrice: settings.fabricPrice,
+          fabricMeter: settings.fabricMeter,
           cutProcess: data.cutProcess,
           sationProcess: data.sationProcess,
           washProcess: data.washProcess,

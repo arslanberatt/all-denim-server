@@ -32,8 +32,6 @@ const getProfitRate = (packageType, settings) => {
 
 const calculatePricing = async (inputData, settings) => {
   const {
-    fabricPrice, //default 3.16
-    fabricMeter, //default 1.5
     cutProcess,
     sationProcess,
     washProcess,
@@ -44,7 +42,11 @@ const calculatePricing = async (inputData, settings) => {
     packageType,
   } = inputData;
 
-  // Burada Normal kumaş birim fiyatı hesaplanıyor default olarak geliyor zaten
+  // Settings'den fabric price ve meter alınıyor
+  const fabricPrice = settings.fabricPrice;
+  const fabricMeter = settings.fabricMeter;
+  
+  // Burada Normal kumaş birim fiyatı hesaplanıyor
   const fabricUnitPrice = fabricPrice * fabricMeter;
 
   //Burada işçilik maliyeti hesaplanıyor
