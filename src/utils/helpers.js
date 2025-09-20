@@ -42,9 +42,9 @@ const calculatePricing = async (inputData, settings) => {
     packageType,
   } = inputData;
 
-  // Settings'den fabric price ve meter alınıyor
-  const fabricPrice = settings.fabricPrice || 3.16;
-  const fabricMeter = settings.fabricMeter || 1.5;
+  // Geçici olarak sabit değerler - database'de kolon yok
+  const fabricPrice = 3.16;
+  const fabricMeter = 1.5;
 
   // Burada Normal kumaş birim fiyatı hesaplanıyor
   const fabricUnitPrice = fabricPrice * fabricMeter;

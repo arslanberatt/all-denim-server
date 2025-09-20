@@ -8,6 +8,8 @@ class SettingsService {
       if (!settings) {
         settings = await prisma.settings.create({
           data: {
+            fabricPrice: 3.16,
+            fabricMeter: 1.5,
             overhead050: 12.5,
             overhead51100: 12.5,
             overhead101200: 10,
