@@ -64,7 +64,7 @@ npm start
 ## 🔧 Environment Variables
 
 ```env
-DATABASE_URL="postgresql://berat:Berat123.@localhost:5432/denim_db"
+DATABASE_URL="postgresql://{USERNAME}:{PASSWORD}@localhost:5432/denim_db"
 PORT=8085
 NODE_ENV=development
 ```
