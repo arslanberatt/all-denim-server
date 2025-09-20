@@ -1,4 +1,4 @@
-const CompanyService = require("../services/companyService");
+const CompanyService = require("../services/company.service");
 
 async function createCompanyController(req, res) {
   try {

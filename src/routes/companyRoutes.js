@@ -1,6 +1,6 @@
 // src/routes/companyRoutes.js
 const express = require("express");
-const CompanyController = require("../controllers/companyController");
+const CompanyController = require("../controllers/company.controller");
 const { validateCompany } = require("../middleware/validation");
 
 const router = express.Router();

@@ -2,7 +2,7 @@ const { PACKAGE_TYPES } = require("./constants");
 const {
   convertTryToEur,
   getEurRate,
-} = require("../services/exchangeRateService");
+} = require("../services/exchangeRate.service");
 
 const getOverheadRate = (packageType, settings) => {
   switch (packageType) {

@@ -1,6 +1,6 @@
 // src/routes/settingsRoutes.js
 const express = require("express");
-const SettingsController = require("../controllers/settingsController");
+const SettingsController = require("../controllers/settings.controller");
 
 const router = express.Router();
 

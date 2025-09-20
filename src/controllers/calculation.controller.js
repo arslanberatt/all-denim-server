@@ -1,4 +1,4 @@
-const CalculationService = require("../services/calculationService");
+const CalculationService = require("../services/calculation.service");
 
 async function createCalculationController(req, res) {
   try {

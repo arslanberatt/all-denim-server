@@ -5,6 +5,7 @@ Bu dosya Railway'de API'yi canlıya alma işlemleri için hazırlanmıştır.
 ## 🚀 Railway'de Deploy Etme
 
 ### 1. Proje Oluşturma
+
 1. [railway.app](https://railway.app) adresine gidin
 2. GitHub hesabınızla giriş yapın
 3. **"New Project"** → **"Deploy from GitHub repo"**
@@ -12,11 +13,13 @@ Bu dosya Railway'de API'yi canlıya alma işlemleri için hazırlanmıştır.
 5. **"Deploy Now"** butonuna tıklayın
 
 ### 2. PostgreSQL Servisi Ekleme
+
 1. Proje dashboard'unda **"New Service"** butonuna tıklayın
 2. **"Database"** → **"PostgreSQL"** seçin
 3. Servis otomatik olarak oluşturulacak
 
 ### 3. Environment Variables Ayarlama
+
 Backend servisinizde **"Variables"** sekmesine gidin ve şunları ekleyin:
 
 ```
@@ -25,16 +28,19 @@ NODE_ENV = production
 ```
 
 **DATABASE_URL'yi nereden alacaksınız:**
+
 1. PostgreSQL servisinizi seçin
 2. **"Variables"** sekmesine gidin
 3. `DATABASE_URL` değerini kopyalayın
 4. Backend servisinize yapıştırın
 
 ### 4. Build Ayarları
+
 - **Build Command**: `npm run build`
 - **Start Command**: `npm start`
 
 ### 5. Deploy
+
 Railway otomatik olarak deploy edecek ve Prisma migration'ları çalışacak.
 
 ## ✅ Kontrol Listesi
@@ -54,14 +60,17 @@ Deploy edildikten sonra API'niz şu adreste çalışacak:
 ## 🛠️ Sorun Giderme
 
 ### "Post-deploy not started" Hatası
+
 - Environment variables'ları kontrol edin
 - Build logs'larını inceleyin
 - DATABASE_URL doğru mu kontrol edin
 
 ### Veritabanı Bağlantı Hatası
+
 - PostgreSQL servisinin çalıştığını kontrol edin
 - DATABASE_URL'nin doğru kopyalandığını kontrol edin
 
 ### CORS Hatası
+
 - Frontend domain'inizi CORS ayarlarına ekleyin
 - Environment variables'da FRONTEND_URL ekleyin

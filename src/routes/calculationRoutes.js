@@ -1,5 +1,5 @@
 const express = require("express");
-const CalculationController = require("../controllers/calculationController");
+const CalculationController = require("../controllers/calculation.controller");
 const { validateCalculation } = require("../middleware/validation");
 
 const router = express.Router();

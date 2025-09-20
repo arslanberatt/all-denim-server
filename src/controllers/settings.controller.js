@@ -1,4 +1,4 @@
-const SettingsService = require("../services/settingsService");
+const SettingsService = require("../services/settings.service");
 
 async function getSettingsController(req, res) {
   try {
