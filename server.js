@@ -2,9 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const { corsMiddleware, corsPreflight } = require("./src/middleware/cors");
 const { errorHandler, notFound } = require("./src/middleware/error.handler");
-const companyRoutes = require("./src/routes/companyRoutes");
-const calculationRoutes = require("./src/routes/calculationRoutes");
-const settingsRoutes = require("./src/routes/settingsRoutes");
+const companyRoutes = require("./src/routes/company.routes");
+const calculationRoutes = require("./src/routes/calculation.routes");
+const settingsRoutes = require("./src/routes/settings.routes");
 const { getEurRate } = require("./src/services/exchangeRate.service");
 const prisma = require("./src/config/database");
 
