@@ -14,7 +14,6 @@ app.use(corsMiddleware);
 app.use(corsPreflight);
 app.use(express.json());
 
-// Static files removed - this is a backend API only
 
 app.get("/", (req, res) => {
   res.json({
@@ -38,7 +37,6 @@ app.get("/api/db-test", async (req, res) => {
   }
 });
 
-// Exchange rate endpoint
 app.get("/api/exchange-rate", async (req, res) => {
   try {
     const rateData = await getEurRate();
