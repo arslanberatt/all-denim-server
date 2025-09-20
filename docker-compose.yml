@@ -1,0 +1,43 @@
+# docker-compose.yml
+version: "3.8"
+
+services:
+  # PostgreSQL veritabanı
+  postgres:
+    image: postgres:15-alpine
+    container_name: denim-postgres
+    environment:
+      POSTGRES_DB: denim_db
+      POSTGRES_USER: berat
+      POSTGRES_PASSWORD: Berat123.
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - denim-network
+
+  # Backend uygulaması
+  backend:
+    build: .
+    container_name: denim-backend
+    environment:
+      NODE_ENV: production
+      PORT: 8085
+      DATABASE_URL: postgresql://berat:Berat123.@postgres:5432/denim_db
+    ports:
+      - "8085:8085"
+    depends_on:
+      - postgres
+    volumes:
+      - ./uploads:/app/uploads
+    networks:
+      - denim-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  denim-network:
+    driver: bridge

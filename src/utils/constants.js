@@ -1,0 +1,35 @@
+const PACKAGE_TYPES = {
+  PACKAGE_050: "PACKAGE_050",
+  PACKAGE_51100: "PACKAGE_51100",
+  PACKAGE_101200: "PACKAGE_101200",
+};
+
+const PACKAGE_TYPE_LABELS = {
+  [PACKAGE_TYPES.PACKAGE_050]: "0-50",
+  [PACKAGE_TYPES.PACKAGE_51100]: "51-100",
+  [PACKAGE_TYPES.PACKAGE_101200]: "101-200",
+};
+
+const HTTP_STATUS = {
+  OK: 200,
+  CREATED: 201,
+  BAD_REQUEST: 400,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+};
+
+const MESSAGES = {
+  SUCCESS: "İşlem başarılı",
+  ERROR: "Bir hata oluştu",
+  NOT_FOUND: "Kayıt bulunamadı",
+  VALIDATION_ERROR: "Doğrulama hatası",
+  DATABASE_ERROR: "Veritabanı hatası",
+};
+
+module.exports = {
+  PACKAGE_TYPES,
+  PACKAGE_TYPE_LABELS,
+  HTTP_STATUS,
+  MESSAGES,
+};

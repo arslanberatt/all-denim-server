@@ -1,0 +1,75 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Company {
+    id            Int      @id @default(autoincrement())
+    name          String
+    email         String?
+    address       String?
+    contactPerson String?
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+
+    calculations Calculation[]
+}
+
+model Calculation {
+    id          Int         @id @default(autoincrement())
+    companyId   Int
+    packageType PackageType
+
+    fabricPrice      Float @default(3.16)
+    fabricMeter      Float @default(1.5)
+    fabricUnitPrice  Float
+    cutProcess       Float
+    sationProcess    Float
+    washProcess      Float
+    printProcess     Float
+    wearProcess      Float
+    accessoryProcess Float
+    buttonProcess    Float
+
+    laborCost      Float
+    laborCostInEUR Float
+    materialCost   Float
+    overheadCost   Float
+    profitMargin   Float
+    subtotal       Float
+    commission     Float
+    tax            Float
+    totalPrice     Float
+    eurRate        Float
+    eurRateUpdated DateTime
+
+    createdAt DateTime @default(now())
+    company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+}
+
+model Settings {
+    id Int @id @default(autoincrement())
+
+    overhead050    Float @default(12.5)
+    overhead51100  Float @default(12.5)
+    overhead101200 Float @default(10)
+
+    profit050    Float @default(30)
+    profit51100  Float @default(25)
+    profit101200 Float @default(15)
+
+    taxRate  Float @default(20)
+    commRate Float @default(5)
+
+    updatedAt DateTime @updatedAt
+}
+
+enum PackageType {
+    PACKAGE_050
+    PACKAGE_51100
+    PACKAGE_101200
+}

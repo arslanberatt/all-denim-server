@@ -1,0 +1,37 @@
+{
+  "name": "all-denim-server",
+  "author": "Berat Arslan",
+  "version": "1.0.0",
+  "description": "Denim Fiyat Hesaplama Sistemi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "docker:build": "docker build -t denim-backend .",
+    "docker:run": "docker run -p 8085:8085 denim-backend",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": ["denim", "textile", "pricing"],
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "prisma": "^6.16.2",
+    "xlsx": "^0.18.5",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
