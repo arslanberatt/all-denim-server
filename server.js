@@ -9,14 +9,12 @@ const { getEurRate } = require("./src/services/exchangeRateService");
 const prisma = require("./src/config/database");
 
 const app = express();
-const path = require("path");
 
 app.use(corsMiddleware);
 app.use(corsPreflight);
 app.use(express.json());
 
-// Serve static files from public directory
-app.use(express.static(path.join(__dirname, "public")));
+// Static files removed - this is a backend API only
 
 app.get("/", (req, res) => {
   res.json({
