@@ -101,4 +101,30 @@ npm run db:migrate
 npm run dev
 ```
 
+## 📡 API Endpoints
+
+**Base URL:** `http://localhost:8085/api` (Local)  
+**Production URL:** `https://all-denim-server-production.up.railway.app/api`
+
+### Şirket Yönetimi
+- `GET /companies` - Tüm şirketleri listele
+- `POST /companies` - Yeni şirket ekle
+- `GET /companies/:id` - Belirli şirketi getir
+- `PUT /companies/:id` - Şirket güncelle
+- `DELETE /companies/:id` - Şirket sil
+
+### Hesaplama Sistemi
+- `GET /calculations` - Tüm hesaplamaları listele
+- `POST /calculations` - Yeni hesaplama yap
+- `GET /calculations/:id` - Belirli hesaplamayı getir
+- `DELETE /calculations/:id` - Hesaplama sil
+
+### Ayarlar
+- `GET /settings` - Sistem ayarlarını getir
+- `PUT /settings` - Sistem ayarlarını güncelle
+
+### Yardımcı Endpoints
+- `GET /db-test` - Veritabanı bağlantı testi
+- `GET /exchange-rate` - Güncel döviz kuru (EUR/TRY)
+
 **API:** http://localhost:8085/api
