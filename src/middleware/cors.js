@@ -1,16 +1,16 @@
 const cors = require("cors");
 
-// Development ve production için farklı CORS ayarları
-const isDevelopment = process.env.NODE_ENV !== "production";
-
 const corsOptions = {
-  origin: isDevelopment
-    ? [
-        "http://localhost:8085",
-        "http://localhost:3000",
-        "http://localhost:5173",
-      ]
-    : [process.env.BACKEND_URL, process.env.FRONTEND_URL],
+  origin: [
+    "http://localhost:8085",
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://localhost:5174",
+    process.env.BACKEND_URL,
+    process.env.FRONTEND_URL,
+    "https://all-denim-client.vercel.app",
+    "https://all-denim-client-production.up.railway.app"
+  ].filter(Boolean), // undefined değerleri filtrele
   credentials: false,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"],
