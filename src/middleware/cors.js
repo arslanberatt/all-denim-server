@@ -10,11 +10,7 @@ const corsOptions = {
         "http://localhost:3000",
         "http://localhost:5173",
       ]
-    : [
-        process.env.BACKEND_URL ||
-          "https://all-denim-server-production.up.railway.app",
-        process.env.FRONTEND_URL || "https://all-denim-client.vercel.app",
-      ],
+    : [process.env.BACKEND_URL, process.env.FRONTEND_URL],
   credentials: false,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"],
