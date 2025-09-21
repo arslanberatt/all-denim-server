@@ -83,7 +83,7 @@ const calculatePricing = async (inputData, settings) => {
   // Komisyon oranı ise default olarak 5% geliyor
   const commission = subtotal * (settings.commRate / 100);
 
-  // KDV ise Ara toplam + Komisyon * 30% dan (default) üzerinden hesaplanıyor
+  // KDV ise Ara toplam + Komisyon * 20% dan (default) üzerinden hesaplanıyor
   const tax = (subtotal + commission) * (settings.taxRate / 100);
 
   // Burada Toplam fiyat Ara toplam + Komisyon + KDV şeklinde hesaplanıyor

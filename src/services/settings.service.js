@@ -16,7 +16,7 @@ class SettingsService {
             profit050: 30,
             profit51100: 25,
             profit101200: 15,
-            taxRate: 30,
+            taxRate: 20,
             commRate: 5,
           },
         });

@@ -8,6 +8,8 @@ const corsOptions = {
     "http://localhost:5174",
     process.env.BACKEND_URL,
     process.env.FRONTEND_URL,
+    "https://all-denim-client.vercel.app",
+    "https://all-denim-client-production.up.railway.app"
   ].filter(Boolean), // undefined değerleri filtrele
   credentials: false,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
